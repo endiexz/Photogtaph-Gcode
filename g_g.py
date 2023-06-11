@@ -97,12 +97,6 @@ def Gcode_create():
         canny, 
         cv2.RETR_EXTERNAL, 
         cv2.CHAIN_APPROX_NONE)
-        file1=open('test.txt','w')
-        file1.write(str(contours))
-        for LINE in contours:
-            file1.write(str(LINE))
-            file1.write('\n\n\n\n')
-        file1.close
         file = open('result.gcode','w')
         for code in static_code:
             file.write(code)
